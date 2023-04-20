@@ -1,3 +1,11 @@
+:root {
+    --main-border-color: #595959;
+}
+
+[v-cloak] {
+    display: none;
+}
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -17,7 +25,7 @@ a:hover {
 }
 
 #app {
-    width: 100vw;
+    width: auto;
     height: 100vh;
     background-image: url("bg-texture.jpg");
     background-size: 256px 256px;
@@ -28,7 +36,7 @@ a:hover {
 .app-container {
     max-width: 1600px;
     margin: 0px auto;
-    height: 100vh;
+    min-height: 100vh;
     color: #fffade;
     background: rgba(0, 0, 0, 0.8);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -41,7 +49,7 @@ a:hover {
 
 .top-container {
     display: flex;
-    border-bottom: 1px solid #fbfbfb;
+    border-bottom: 1px solid var(--main-border-color);
     background: linear-gradient(
         90deg,
         rgba(33, 60, 102, 0.274),
@@ -52,7 +60,8 @@ a:hover {
     flex: 1;
     display: flex;
     justify-content: end;
-    align-items: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 .top-container {
@@ -80,43 +89,140 @@ a:hover {
 }
 
 .left-menu-container {
-    min-width: 200px;
-    flex: 1 0 25%;
-    border-right: 1px solid #fbfbfb;
-}
-
-.main-content-container {
-    flex: 1 1 75%;
+    flex: 1 0 20%;
+    border-right: 1px solid var(--main-border-color);
 }
 
 .project-nav-item {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    white-space: nowrap;
 }
-.project-nav-item:hover {
-    background: #5f74ff2e;
-    transition: 200ms ease-in-out;
+.project-nav-item:hover,
+.project-nav-item.active {
+    background: #5565a0d6;
+    transition: 100ms ease-in-out;
+}
+.project-nav-item.active > p {
+    color: orange;
+}
+.project-nav-item.active .tag-item {
+    background: rgb(247 134 83 / 80%);
 }
 
 .project-nav-item p {
     font-size: 18px;
     font-weight: bold;
     margin: 4px 4px 4px 8px;
-    color: cornsilk;
+    color: white;
 }
 
 .project-nav-item ul {
     list-style-type: none;
-    margin-right: 4px;
-    margin-top: 4px;
+    margin: 4px;
 }
 .project-nav-item .tag-item {
     display: inline-block;
-    background: rgb(46 208 252 / 82%);
+    background: rgb(89 89 89 / 88%);
     padding: 3px 6px;
-    color: rgb(79, 81, 149);
+    color: white;
     font-weight: bold;
     margin: 2px 2px 2px 4px;
     border-radius: 5px;
+}
+
+.project-details-container {
+    flex: 1 1 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.project-details-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-description {
+    color: #ccd3a7;
+    font-size: 14px;
+    font-family: Tahoma;
+    line-height: 25px;
+    text-align: justify;
+    padding: 4px 8px;
+}
+
+.media-description {
+    position: absolute;
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
+    color: burlywood;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    font-family: monospace;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 4px;
+    bottom: 0;
+    margin: 0px;
+    z-index: 999;
+}
+
+.project-details-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details-footer p {
+    color: #cfcfcf;
+    font-size: 12px;
+    margin: 4px;
+}
+
+.project-details-top h1 {
+    text-align: center;
+    margin: auto;
+}
+.project-details-body h3 {
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.project-details-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 20px 10px 10px;
+}
+.project-details-media .media-item {
+    position: relative;
+    flex: 1 1 calc(50% - 10px);
+    border: 3px solid #827bbf;
+    box-shadow: rgba(0, 0, 80, 0.5) 6px 6px 4px;
+    border: 4px solid #2f4d59;
+    border-image: linear-gradient(to right top, #333, #ffffffcf, #337c8c);
+    border-image-slice: 1;
+}
+
+.project-details-media .media-item img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (width <= 1280px) {
+    .project-details-media .media-item {
+        flex-basis: 100%;
+    }
+    .project-description {
+        order: 999;
+    }
+    .main-container {
+        flex-direction: column;
+    }
 }

@@ -1,56 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Разработанные программы</title>
-</head>
-<body>
-    <div id="app">
-        <div class="app-container">
-            <div class="top-container">
-                <div class="author">
-                    <h3>Смирнов Дмитрий</h3>
-                    <p>
-                        <i class="fa fa-envelope"></i>
-                        <a href="mailto:painven@gmail.com">painven@gmail.com</a>
-                    </p>
-                    <p>
-                        <i class="fa fa-brands fa-telegram"></i>
-                        <a href="https://t.me/painven">@painven</a>
-                    </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="style.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+            integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Смирнов Дмитрий | Портфолио | Программист C# (.NET)</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="app-container" v-cloak>
+                <div class="top-container">
+                    <div class="author">
+                        <h3>Смирнов Дмитрий</h3>
+                        <p>
+                            <i class="fa fa-envelope"></i>
+                            <a href="mailto:painven@gmail.com"
+                                >painven@gmail.com</a
+                            >
+                        </p>
+                        <p>
+                            <i class="fa fa-brands fa-telegram"></i>
+                            <a href="https://t.me/painven">@painven</a>
+                        </p>
+                    </div>
+                    <div class="git-info-container">
+                        <p>
+                            <a href="https://github.com/Painven" target="_blank"
+                                >Github профиль<i
+                                    class="fa fa-brands fa-github"
+                                ></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a
+                                href="https://github.com/Painven?tab=repositories"
+                                target="_blank"
+                                >Все репозитории</a
+                            >
+                        </p>
+                        <p v-if="selectedProject !== null">
+                            <a
+                                :href="selectedProject.details_page"
+                                target="_blank"
+                                >{{ selectedProject.name }}</a
+                            >
+                        </p>
+                    </div>
                 </div>
-                <div class="git-info-container">
-                    <p>
-                        <a href="https://github.com/Painven?tab=repositories" target="_blank">Все проекты</a>
-                        <i class="fa fa-brands fa-github"></i>
-                    </p>
-                </div>
-            </div>
-            <div class="main-container">
-                <div class="left-menu-container">
-
-                    <div id="projects-list">
-                        <div class="project-nav-item" v-for="project in projects" :key="project.id">
-                          <p>{{ project.name }}</p>
-                          <ul>
-                            <li class="tag-item" v-for="tag in project.tags">
-                                {{ tag }}
-                            </li>
-                            </ul>
+                <div class="main-container">
+                    <div class="left-menu-container">
+                        <div id="projects-list">
+                            <div
+                                class="project-nav-item"
+                                @click="changeActiveProject(project)"
+                                :class="{ 'active' : project.id === selectedProject.id }"
+                                v-for="project in projects"
+                                :key="project.id"
+                            >
+                                <p>{{ project.name }}</p>
+                                <ul>
+                                    <li
+                                        class="tag-item"
+                                        v-for="tag in project.tags"
+                                    >
+                                        {{ tag }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details-container">
+                        <div class="project-details-top">
+                            <h1>{{ selectedProject.name }}</h1>
+                        </div>
+                        <div class="project-details-body">
+                            <p class="project-description">
+                                {{ selectedProject.description }}
+                            </p>
+                            <h3>Скриншоты</h3>
+                            <div class="project-details-media">
+                                <div
+                                    v-if="selectedProject.screenshots !== null"
+                                    v-for="scr in selectedProject.screenshots"
+                                    class="media-item"
+                                >
+                                    <a
+                                        :href="getScreenshotFullPathForProject(scr.filename, selectedProject)"
+                                        data-lightbox="project-images"
+                                        :data-title="scr.description"
+                                    >
+                                        <img
+                                            :src="getScreenshotFullPathForProject(scr.filename, selectedProject)"
+                                        />
+                                    </a>
+                                    <p class="media-description">
+                                        {{ scr.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details-footer">
+                            <p>
+                                Последнее обновление:
+                                <span>{{ selectedProject.last_update }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="main-content-container">
-
-                </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
-    <script src="app.js"></script>
-</body>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <script src="app.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
+            integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </body>
 </html>

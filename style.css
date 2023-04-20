@@ -1,5 +1,5 @@
 :root {
-    --main-border-color: #595959;
+    --main-border-color: #584c69;
 }
 
 [v-cloak] {
@@ -156,19 +156,22 @@ a:hover {
 
 .media-description {
     position: absolute;
-    display: block;
+    display: -webkit-box;
     background: rgba(0, 0, 0, 0.8);
     color: burlywood;
     width: 100%;
-    height: 40px;
     font-size: 12px;
     font-family: monospace;
-    line-height: 20px;
+    line-height: 18px;
     overflow: hidden;
     padding: 4px;
     bottom: 0;
     margin: 0px;
+    height: 40px;
     z-index: 999;
+    text-overflow: inherit;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .project-details-body {
@@ -195,7 +198,7 @@ a:hover {
 .project-details-media {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding: 10px 20px 10px 10px;
@@ -203,7 +206,7 @@ a:hover {
 .project-details-media .media-item {
     position: relative;
     flex: 1 1 calc(50% - 10px);
-    border: 3px solid #827bbf;
+    max-width: 50%;
     box-shadow: rgba(0, 0, 80, 0.5) 6px 6px 4px;
     border: 4px solid #2f4d59;
     border-image: linear-gradient(to right top, #333, #ffffffcf, #337c8c);
@@ -213,11 +216,14 @@ a:hover {
 .project-details-media .media-item img {
     width: 100%;
     height: 100%;
+    object-fit: scale-down;
+    background: white;
 }
 
 @media screen and (width <= 1280px) {
     .project-details-media .media-item {
         flex-basis: 100%;
+        max-width: 75%;
     }
     .project-description {
         order: 999;

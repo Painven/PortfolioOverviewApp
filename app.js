@@ -1,7 +1,11 @@
 var app = new Vue({
     el: "#app",
     data: {
-        message: "from view",
+        projectTypeToIconMap: {
+            "desktop-app": "fa-desktop",
+            "web-app": "fa-table",
+            website: "fa-globe",
+        },
         selectedProject: {},
         projects: [],
     },

@@ -70,6 +70,10 @@
                                 v-for="project in projects"
                                 :key="project.id"
                             >
+                                <i
+                                    class="fa fa-lg"
+                                    :class="[projectTypeToIconMap[project['project-type']]]"
+                                ></i>
                                 <p>{{ project.name }}</p>
                                 <ul>
                                     <li

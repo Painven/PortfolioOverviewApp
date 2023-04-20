@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "EtkKomplektCRM",
+        "project-type": "web-app",
         "screenshotsFolderName": "lk_etk",
         "description": "Личный кабинет компании. Основные возможности: Переодическое обновление остатков и цен на сайте (сайт отдельно, на CMS OpenCart). С помощью прайс-листов поставщиков в разных форматах (.xlsx, .xml, .csv) и из разных источников (напрямую в браузер, из почты, от поставщика - FTP, API и т.д.). Настройках их загрузки автоматитчески. Настройка выгрузки данных о товарах в маркетплейсы (OzonSeller, YandexMarket, Sbermegamarket, ВсеИнструменты). Просмотр заказов. Редактирование товаров",
         "details_page": "https://github.com/Painven/EtkKomplektCRM",
@@ -131,8 +132,9 @@
         ]
     },
     {
-        "id": 5,
+        "id": 2,
         "name": "etk-komplekt.ru",
+        "project-type": "website",
         "screenshotsFolderName": "etk",
         "description": "Интернет-магазин строительной тематики (на 2023 год около 500 000 товаров) на основе шаблона OpenCart 2.1. Хотя сайт и сделан на основе шаблона OC - но было внесено огромное количество функционала, например: Модельные ряды для товаров, отображение остатков по отдельным складам для товара и расчет цены по алгоритму, новости, отзывы и много чего еще включая доработку админки и создание модулей (на php, css, html, js), личный кабинет из проекта EtkKomplektCRM был написан под этот сайт",
         "details_page": "https://etk-komplekt.ru",
@@ -166,8 +168,9 @@
         ]
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "PortfolioOverviewApp",
+        "project-type": "web-app",
         "screenshotsFolderName": "portfolio",
         "description": "SPA приложение-библиотека разработанных программ. Рекурсия ⏎",
         "details_page": "https://github.com/Painven/PortfolioOverviewApp",
@@ -181,8 +184,9 @@
         ]
     },
     {
-        "id": 2,
+        "id": 4,
         "name": "MusicNewWatcher",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "mnwatcher",
         "description": "Программа для парсинга музыкальных (новинок) от разных провайдеров. Например сейчас настроено от Bandicamp.com и с сайта musify.club. Как работает - переодически опрашивает эти сайты, на наличие новинок для сохраненного списка исполнителей, - если появляется новинка отправляется уведомление в Telegram. Так же есть возможность скачать весь альбом прямо из программы. База данных PostgreSQL находится на VPS сервере, т.е. приложение можно открывать на разных компьютерах. Так же есть функционал синхронизации папок с музыкой на разных компьютерах что бы показало каких файлов нет на компьютере-клиенте, по сравнению с другим компьютером",
         "details_page": "https://github.com/Painven/MusicNewsWatcher",
@@ -208,8 +212,9 @@
         ]
     },
     {
-        "id": 3,
+        "id": 5,
         "name": "ImageCompressor",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "image_compressor",
         "description": "WPF Desktop приложение для массовой обработки изображений. Полезно когда есть много изображений - например товары в интернет-магазине, и их нужно однотипно обработать. Сжать, сделать все одного размера, при этом сохранив пропорции или преобразовать .png файлы в .jpg формат",
         "details_page": "https://github.com/Painven/ImageCompressor",
@@ -225,6 +230,7 @@
     {
         "id": 6,
         "name": "FLParser",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "fl_parser",
         "description": "Парсер сайта fl.ru с возможностью добавления ключевых слов которые нужно искать в проектах и задачей интервала обхода",
         "details_page": "https://github.com/Painven/FLWatcher",
@@ -240,6 +246,7 @@
     {
         "id": 7,
         "name": "AudioMerger",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "audio_merger",
         "description": "Программа простого накладывания треков один на другой. С помощью программы удобно например на длинный аудио файл наложить музыку с низним процентом громкости (можно указать в программе). Я часто использую ее когда загружаю какой-нибуть подкаст и накладываю поверх нужную мне музыку",
         "details_page": "https://github.com/Painven/AudioLayersMerger",
@@ -255,6 +262,7 @@
     {
         "id": 8,
         "name": "YoutubeDownloader",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "youtube_downloader",
         "description": "Программа для массовой скачки youtube видео в MP3 формат",
         "details_page": "https://github.com/Painven/YoutubeDownloader",
@@ -270,6 +278,7 @@
     {
         "id": 9,
         "name": "TodoList",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "todo_list",
         "description": "Обычное приложение типа Todo-лист (Список дел, записная книжка-напоминалка)",
         "details_page": "https://github.com/Painven/TodoList",
@@ -293,6 +302,7 @@
     {
         "id": 10,
         "name": "MasterPassword",
+        "project-type": "desktop-app",
         "screenshotsFolderName": "master_pass",
         "description": "Приложение для хранения и генерации паролей",
         "details_page": "https://github.com/Painven/MasterPassword",

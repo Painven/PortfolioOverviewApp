@@ -25,12 +25,11 @@ a:hover {
 }
 
 #app {
-    width: auto;
     height: 100vh;
     background-image: url("bg-texture.jpg");
     background-size: 256px 256px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .app-container {
@@ -95,9 +94,14 @@ a:hover {
 
 .project-nav-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
     cursor: pointer;
     white-space: nowrap;
+    align-items: center;
+}
+.project-nav-item .fa {
+    color: rgb(255 255 255 / 50%);
+    margin-left: 10px;
 }
 .project-nav-item:hover,
 .project-nav-item.active {
@@ -119,17 +123,21 @@ a:hover {
 }
 
 .project-nav-item ul {
+    justify-self: right;
     list-style-type: none;
     margin: 4px;
+    width: 100%;
+    text-align: right;
 }
 .project-nav-item .tag-item {
     display: inline-block;
     background: rgb(89 89 89 / 88%);
-    padding: 3px 6px;
+    padding: 2px 4px;
     color: white;
     font-weight: bold;
     margin: 2px 2px 2px 4px;
     border-radius: 5px;
+    font-size: 12px;
 }
 
 .project-details-container {

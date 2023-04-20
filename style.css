@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Tahoma;
+}
+p {
+    margin: 2px;
+}
+a {
+    color: deepskyblue;
+}
+a:hover {
+    color: #d5e7ff;
+    transition: 200ms ease-in-out;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("bg-texture.jpg");
+    background-size: 256px 256px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.app-container {
+    max-width: 1600px;
+    margin: 0px auto;
+    height: 100vh;
+    color: #fffade;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.top-container {
+    display: flex;
+    border-bottom: 1px solid #fbfbfb;
+    background: linear-gradient(
+        90deg,
+        rgba(33, 60, 102, 0.274),
+        rgba(62, 90, 216, 0.315)
+    );
+}
+.top-container .git-info-container {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.top-container {
+    min-height: 80px;
+    padding: 8px;
+}
+.fa {
+    font-size: 24px;
+    margin: 2px 6px;
+    color: lightblue;
+}
+
+.top-container p {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.main-container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 8px;
+}
+
+.left-menu-container {
+    min-width: 200px;
+    flex: 1 0 25%;
+    border-right: 1px solid #fbfbfb;
+}
+
+.main-content-container {
+    flex: 1 1 75%;
+}
+
+.project-nav-item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.project-nav-item:hover {
+    background: #5f74ff2e;
+    transition: 200ms ease-in-out;
+}
+
+.project-nav-item p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 4px 4px 8px;
+    color: cornsilk;
+}
+
+.project-nav-item ul {
+    list-style-type: none;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+.project-nav-item .tag-item {
+    display: inline-block;
+    background: rgb(46 208 252 / 82%);
+    padding: 3px 6px;
+    color: rgb(79, 81, 149);
+    font-weight: bold;
+    margin: 2px 2px 2px 4px;
+    border-radius: 5px;
+}

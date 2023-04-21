@@ -1,5 +1,6 @@
 :root {
-    --main-border-color: #584c69;
+    --main-border-color: #7f7c6d;
+    --main-content-color: #4682b4c4;
 }
 
 [v-cloak] {
@@ -26,7 +27,7 @@ a:hover {
 
 #app {
     height: 100vh;
-    background-image: url("bg-texture.jpg");
+    background-image: url("images/bg-texture.jpg");
     background-size: 256px 256px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -84,7 +85,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    gap: 8px;
 }
 
 .left-menu-container {
@@ -105,7 +105,7 @@ a:hover {
 }
 .project-nav-item:hover,
 .project-nav-item.active {
-    background: #5565a0d6;
+    background: var(--main-content-color);
     transition: 100ms ease-in-out;
 }
 .project-nav-item.active > p {
@@ -146,6 +146,7 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    background: var(--main-content-color);
 }
 
 .project-details-top {

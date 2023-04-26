@@ -224,7 +224,7 @@ a:hover {
 
 .project-details-media .media-item img {
     width: 100%;
-    height: 100%;
+    height: 320px;
     object-fit: cover;
     object-position: left top;
     background: white;

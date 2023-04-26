@@ -15,14 +15,6 @@ var app = new Vue({
                 "/screenshots/" + project.screenshotsFolderName + "/" + fileName
             );
         },
-        getScreenshotPreviewPathForProject(fileName, project) {
-            return (
-                "/screenshots-preview/" +
-                project.screenshotsFolderName +
-                "/" +
-                fileName
-            );
-        },
         changeActiveProject(newProject) {
             this.selectedProject = newProject;
         },

@@ -2,4 +2,3 @@ src/screenshots-preview/*
 src/screenshots/*
 .vs
 .vscode
-docker-compose.yml

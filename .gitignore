@@ -3,3 +3,4 @@ src/screenshots/*
 .vs
 .vscode
 .dockerignore
+init-letsencrypt.sh

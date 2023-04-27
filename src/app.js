@@ -20,7 +20,6 @@ var app = new Vue({
         },
     },
     mounted: async function () {
-        let d = this;
         await fetch("./projects.json")
             .then((response) => response.json())
             .then((json) => {

@@ -133,202 +133,6 @@
     },
     {
         "id": 2,
-        "name": "etk-komplekt.ru",
-        "project-type": "website",
-        "screenshotsFolderName": "etk",
-        "description": "Интернет-магазин строительной тематики (на 2023 год около 500 000 товаров) на основе шаблона OpenCart 2.1. Хотя сайт и сделан на основе шаблона OC - но было внесено огромное количество функционала, например: Модельные ряды для товаров, отображение остатков по отдельным складам для товара и расчет цены по алгоритму, новости, отзывы и много чего еще включая доработку админки и создание модулей (на php, css, html, js), личный кабинет из проекта EtkKomplektCRM был написан под этот сайт",
-        "details_page": "https://etk-komplekt.ru",
-        "tags": ["PHP", "HTML", "MySQL"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Главная страница"
-            },
-            {
-                "filename": "2.png",
-                "description": "Страница отдельного товара"
-            },
-            {
-                "filename": "3.png",
-                "description": "Подбор рекомендуемых товаров"
-            },
-            {
-                "filename": "4.png",
-                "description": "Баннеры на главной странице"
-            },
-            {
-                "filename": "5.png",
-                "description": "Страница вывода подтвержденных отзывов"
-            },
-            {
-                "filename": "6.png",
-                "description": "Страница вывода новостей"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "PortfolioOverviewApp",
-        "project-type": "web-app",
-        "screenshotsFolderName": "portfolio",
-        "description": "Сама программа в которой вы смотрите эту запись ------ Рекурсия ⏎⏎⏎⏎⏎⏎",
-        "details_page": "https://github.com/Painven/PortfolioOverviewApp",
-        "tags": ["VueJS", "HTML", "JSON"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Главная страница"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "MusicNewWatcher",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "mnwatcher",
-        "description": "Программа для парсинга музыкальных (новинок) от разных провайдеров. Сейчас настроена загрузка от провайдеров: bandcamp.com и с сайта musify.club. Как работает: переодически опрашивает сайты-провайдера (страницы сохраненных исполнителей) на наличие новых альбом, - если появляется новинка отправляется уведомление в Telegram. Так же есть возможность скачать весь альбом прямо из программы. Так же, есть функционал синхронизации папок с музыкой на разных компьютерах. Показывает - каких файлов нет на компьютере-клиенте, по сравнению с другим компьютером",
-        "details_page": "https://github.com/Painven/MusicNewsWatcher",
-        "tags": ["WPF", "MVVM", "PostgreSQL"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Основное меню программы"
-            },
-            {
-                "filename": "2.png",
-                "description": "Окно добавления нового бренда с функцией автоподстановки (поиска) артиста для провайдера."
-            },
-            {
-                "filename": "3.png",
-                "description": "Форма просмотра разницы в треках на разных компьютерах"
-            },
-            {
-                "filename": "4.png",
-                "description": "Форма настроек. Тут можно указать API от телеграм бота на который будут приходить уведомления при нахождении новых треков и задать интервал проверки, количество потоков загрузки"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "ImageCompressor",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "image_compressor",
-        "description": "WPF Desktop приложение для массовой обработки изображений. Полезно когда есть много изображений - например товары в интернет-магазине, и их нужно однотипно обработать. Сжать, сделать все одного размера, при этом сохранив пропорции или преобразовать .png файлы в .jpg формат",
-        "details_page": "https://github.com/Painven/ImageCompressor",
-        "tags": ["WPF", "MVVM"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Основное меню программы"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "name": "FLParser",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "fl_parser",
-        "description": "Парсер сайта fl.ru с возможностью добавления ключевых слов которые нужно искать в проектах и задачей интервала обхода",
-        "details_page": "https://github.com/Painven/FLWatcher",
-        "tags": ["WPF", "MVVM"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Главная страница"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "name": "AudioMerger",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "audio_merger",
-        "description": "Программа для наложения на один длинный файл других аудио-дорожек которые меньше по продолжительности. Это может бьть любой MP3 файл - например: подкаст, длинный выпуск новостей или что-то еще. Я использую это когда есть длинный аудио файл и нужно поверх него наложить музыку на фон, с более тихой громкостью чем главный канал. - Т.е. это можно сделать и например на телефоне, но тогда нужно открыть 2 разных аудио-плеера. Не на каждом телефоне есть возможность менять отдельно уровень звука в разных аудио-плеерах",
-        "details_page": "https://github.com/Painven/AudioLayersMerger",
-        "tags": ["WPF", "MVVM"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Главная страница"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "name": "YoutubeDownloader",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "youtube_downloader",
-        "description": "Программа для массовой скачки youtube видео в MP3 формат",
-        "details_page": "https://github.com/Painven/YoutubeDownloader",
-        "tags": ["WPF", "MVVM"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Главная страница"
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "name": "TodoList",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "todo_list",
-        "description": "Обычное приложение типа Todo-лист (Список дел, записная книжка-напоминалка)",
-        "details_page": "https://github.com/Painven/TodoList",
-        "tags": ["WPF", "MVVM", "PostgreSQL"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Окно входа в программу"
-            },
-            {
-                "filename": "2.png",
-                "description": "Главная страница с разбивкой по клиентам, клиентов можно добавлять (отдельная вкладка)"
-            },
-            {
-                "filename": "3.png",
-                "description": "Список книг на прочтение что, бы не забыть"
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "name": "MasterPassword",
-        "project-type": "desktop-app",
-        "screenshotsFolderName": "master_pass",
-        "description": "Приложение для хранения и генерации паролей",
-        "details_page": "https://github.com/Painven/MasterPassword",
-        "tags": ["WPF", "MVVM", "PostgreSQL"],
-        "last_update": "?",
-        "screenshots": [
-            {
-                "filename": "1.png",
-                "description": "Окно входа в программу"
-            },
-            {
-                "filename": "2.png",
-                "description": "Главная окно"
-            },
-            {
-                "filename": "3.png",
-                "description": "Форма генерации пароля"
-            },
-            {
-                "filename": "4.png",
-                "description": "Форма добавления нового пароля"
-            }
-        ]
-    },
-    {
-        "id": 11,
         "name": "EShop",
         "project-type": "web-app",
         "screenshotsFolderName": "eshop",
@@ -376,7 +180,7 @@
         ]
     },
     {
-        "id": 12,
+        "id": 3,
         "name": "KnewAlready",
         "project-type": "web-app",
         "screenshotsFolderName": "knew_already",
@@ -400,6 +204,270 @@
             {
                 "filename": "4.png",
                 "description": "Настройки профиля. Тут мы можем указать наш Telegram номер, и при выполнении события нам (обоим людям) придет уведомления от бота"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "PortfolioOverviewApp",
+        "project-type": "web-app",
+        "screenshotsFolderName": "portfolio",
+        "description": "Сама программа в которой вы смотрите эту запись ------ Рекурсия ⏎⏎⏎⏎⏎⏎",
+        "details_page": "https://github.com/Painven/PortfolioOverviewApp",
+        "tags": ["VueJS", "HTML", "JSON"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главная страница"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "MusicNewWatcher",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "mnwatcher",
+        "description": "Программа для парсинга музыкальных (новинок) от разных провайдеров. Сейчас настроена загрузка от провайдеров: bandcamp.com и с сайта musify.club. Как работает: переодически опрашивает сайты-провайдера (страницы сохраненных исполнителей) на наличие новых альбом, - если появляется новинка отправляется уведомление в Telegram. Так же есть возможность скачать весь альбом прямо из программы. Так же, есть функционал синхронизации папок с музыкой на разных компьютерах. Показывает - каких файлов нет на компьютере-клиенте, по сравнению с другим компьютером",
+        "details_page": "https://github.com/Painven/MusicNewsWatcher",
+        "tags": ["WPF", "MVVM", "PostgreSQL"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Основное меню программы"
+            },
+            {
+                "filename": "2.png",
+                "description": "Окно добавления нового бренда с функцией автоподстановки (поиска) артиста для провайдера."
+            },
+            {
+                "filename": "3.png",
+                "description": "Форма просмотра разницы в треках на разных компьютерах"
+            },
+            {
+                "filename": "4.png",
+                "description": "Форма настроек. Тут можно указать API от телеграм бота на который будут приходить уведомления при нахождении новых треков и задать интервал проверки, количество потоков загрузки"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "ImageCompressor",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "image_compressor",
+        "description": "WPF Desktop приложение для массовой обработки изображений. Полезно когда есть много изображений - например товары в интернет-магазине, и их нужно однотипно обработать. Сжать, сделать все одного размера, при этом сохранив пропорции или преобразовать .png файлы в .jpg формат",
+        "details_page": "https://github.com/Painven/ImageCompressor",
+        "tags": ["WPF", "MVVM"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Основное меню программы"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "FLParser",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "fl_parser",
+        "description": "Парсер сайта fl.ru с возможностью добавления ключевых слов которые нужно искать в проектах и задачей интервала обхода",
+        "details_page": "https://github.com/Painven/FLWatcher",
+        "tags": ["WPF", "MVVM"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главная страница"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "AudioMerger",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "audio_merger",
+        "description": "Программа для наложения на один длинный файл других аудио-дорожек которые меньше по продолжительности. Это может бьть любой MP3 файл - например: подкаст, длинный выпуск новостей или что-то еще. Я использую это когда есть длинный аудио файл и нужно поверх него наложить музыку на фон, с более тихой громкостью чем главный канал. - Т.е. это можно сделать и например на телефоне, но тогда нужно открыть 2 разных аудио-плеера. Не на каждом телефоне есть возможность менять отдельно уровень звука в разных аудио-плеерах",
+        "details_page": "https://github.com/Painven/AudioLayersMerger",
+        "tags": ["WPF", "MVVM"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главная страница"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "YoutubeDownloader",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "youtube_downloader",
+        "description": "Программа для массовой скачки youtube видео в MP3 формат",
+        "details_page": "https://github.com/Painven/YoutubeDownloader",
+        "tags": ["WPF", "MVVM"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главная страница"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "TodoList",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "todo_list",
+        "description": "Обычное приложение типа Todo-лист (Список дел, записная книжка-напоминалка)",
+        "details_page": "https://github.com/Painven/TodoList",
+        "tags": ["WPF", "MVVM", "PostgreSQL"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Окно входа в программу"
+            },
+            {
+                "filename": "2.png",
+                "description": "Главная страница с разбивкой по клиентам, клиентов можно добавлять (отдельная вкладка)"
+            },
+            {
+                "filename": "3.png",
+                "description": "Список книг на прочтение что, бы не забыть"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "MasterPassword",
+        "project-type": "desktop-app",
+        "screenshotsFolderName": "master_pass",
+        "description": "Приложение для хранения и генерации паролей",
+        "details_page": "https://github.com/Painven/MasterPassword",
+        "tags": ["WPF", "MVVM", "PostgreSQL"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Окно входа в программу"
+            },
+            {
+                "filename": "2.png",
+                "description": "Главная окно"
+            },
+            {
+                "filename": "3.png",
+                "description": "Форма генерации пароля"
+            },
+            {
+                "filename": "4.png",
+                "description": "Форма добавления нового пароля"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "etk-komplekt.ru",
+        "project-type": "website",
+        "screenshotsFolderName": "etk",
+        "description": "Интернет-магазин строительной тематики (на 2023 год около 500 000 товаров) на основе шаблона OpenCart 2.1. Хотя сайт и сделан на основе шаблона OC - но было внесено огромное количество функционала, например: Модельные ряды для товаров, отображение остатков по отдельным складам для товара и расчет цены по алгоритму, новости, отзывы и много чего еще включая доработку админки и создание модулей (на php, css, html, js), личный кабинет из проекта EtkKomplektCRM был написан под этот сайт",
+        "details_page": "https://etk-komplekt.ru",
+        "tags": ["OpenCart", "PHP", "HTML"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главная страница"
+            },
+            {
+                "filename": "2.png",
+                "description": "Страница отдельного товара"
+            },
+            {
+                "filename": "3.png",
+                "description": "Подбор рекомендуемых товаров"
+            },
+            {
+                "filename": "4.png",
+                "description": "Баннеры на главной странице"
+            },
+            {
+                "filename": "5.png",
+                "description": "Страница вывода подтвержденных отзывов"
+            },
+            {
+                "filename": "6.png",
+                "description": "Страница вывода новостей"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "teplostroy78.ru",
+        "project-type": "website",
+        "screenshotsFolderName": "teplostroy78",
+        "description": "Сайт по проектированию, продаже и монтажу отопления и водоснабжения.  Я добавлял услуги, статьи, выполнял настройку хостинга и устанавливал все модули (сайт на CMS OpenCart)",
+        "details_page": "https://teplostroy78.ru",
+        "tags": ["OpenCart", "PHP", "HTML"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главное страница"
+            },
+			{
+                "filename": "2.png",
+                "description": "Страница конакты"
+            },
+			{
+                "filename": "3.png",
+                "description": "Страница фото работ"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "uborka-vsem.ru",
+        "project-type": "website",
+        "screenshotsFolderName": "uborka_vsem",
+        "description": "Сайт по предоставлению услуг уборки территорий. Я добавлял услуги, статьи, выполнял настройку хостинга и устанавливал все модули (сайт на CMS WordPress)",
+        "details_page": "https://uborka-vsem.ru/",
+        "tags": ["WordPress", "PHP", "HTML"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главное страница"
+            },
+			{
+                "filename": "2.png",
+                "description": "Страница контактов"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "beton-monolitservis.ru",
+        "project-type": "website",
+        "screenshotsFolderName": "beton_monolitservis",
+        "description": "Сайт по продаже бетона разных видов. Я добавлял товары, услуги, выполнял настройку хостинга и устанавливал все модули (сайт на CMS WordPress)",
+        "details_page": "https://beton-monolitservis.ru",
+        "tags": ["WordPress", "PHP", "HTML"],
+        "last_update": "?",
+        "screenshots": [
+            {
+                "filename": "1.png",
+                "description": "Главное страница"
+            },
+			{
+                "filename": "2.png",
+                "description": "Страница контактов"
+            },
+			{
+                "filename": "3.png",
+                "description": "Страница фото работ"
             }
         ]
     }

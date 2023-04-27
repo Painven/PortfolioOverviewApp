@@ -2,3 +2,4 @@ src/screenshots-preview/*
 src/screenshots/*
 .vs
 .vscode
+.dockerignore

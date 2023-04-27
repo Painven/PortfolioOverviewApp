@@ -1,6 +1,6 @@
 src/screenshots-preview/*
 src/screenshots/*
-data/*
+data/nginx/*
 .vs
 .vscode
 .dockerignore

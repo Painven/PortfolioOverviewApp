@@ -2,8 +2,8 @@ var app = new Vue({
     el: "#app",
     data: {
         projectTypeToIconMap: {
-            "desktop-app": "fa-desktop",
-            "web-app": "fa-table",
+            "desktop-app": "fa-window-maximize",
+            "web-app": "fa-cloud",
             website: "fa-globe",
         },
         selectedProject: {},

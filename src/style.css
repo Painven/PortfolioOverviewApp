@@ -27,8 +27,9 @@ a:hover {
 
 #app {
     height: 100vh;
-    background-image: url("images/bg-texture.jpg");
-    background-size: 256px 256px;
+    background-image: url("images/bg-texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
     overflow-y: scroll;
 }
